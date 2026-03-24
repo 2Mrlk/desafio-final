@@ -1,0 +1,205 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    background-image: radial-gradient(#e9efeb 1px, transparent 1px);
+    background-size: 20px 20px; /* Simula um padrão sutil ao fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+header h1 {
+    color: #000000; /* Dourado escuro */
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.sr-only {
+    display: none; /* Esconde o label visualmente, mas mantém para leitores de tela */
+}
+
+input[type="date"] {
+    padding: 12px 15px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="date"]:focus {
+    border-color: #d4af37;
+}
+
+button {
+    background: linear-gradient(135deg, #000000 0%, #da9e07 100%);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+}
+
+
+.resultado-oculto {
+    display: none;
+}
+
+.resultado-visivel {
+    display: block;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.brilho-dourado {
+    margin: 20px auto;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(255,215,0,0.8) 0%, rgba(255,255,255,0) 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.silhueta {
+    font-size: 40px;
+    color: #b8860b;
+    text-shadow: 0 0 10px #ffd700;
+}
+
+#nome-cavaleiro {
+    color: #b8860b;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+#poder-cavaleiro {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.moldura-imagem {
+    margin: 20px auto;
+    width: 250px; 
+    height: 250px;
+    border-radius: 50%;
+   
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.9) 0%, rgba(255, 255, 255, 0) 75%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+}
+
+.imagem-carregada {
+    max-width: 90%; 
+    max-height: 90%;
+    object-fit: contain; 
+    display: block;
+}
+
+/* Estilos para resultado e imagem do cavaleiro */
+#resultado {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+#resultado h2 {
+    color: #b8860b;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+#resultado p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#status-cavaleiro {
+    font-weight: bold;
+    color: #d4af37;
+    margin: 15px 0;
+}
+
+#simbolo-cavaleiro {
+    font-size: 60px;
+    color: #d4af37;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+    margin-bottom: 15px;
+}
+
+#imagem-cavaleiro {
+    width: 280px;
+    height: 280px;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+    border: 3px solid #d4af37;
+    margin: 20px auto;
+    display: block;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(255, 255, 255, 0.1));
+}
+
+.simbolo-signo-pequeno {
+    font-size: 24px;
+    color: #b8860b;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #ffd700;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
